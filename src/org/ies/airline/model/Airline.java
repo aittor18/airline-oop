@@ -66,7 +66,7 @@ public class Airline {
         if (flight != null) {
             Passenger passenger = flight.findPassenger(nif);
             if (passenger != null) {
-
+                passenger.getSeatNumber(seatNumber);
             }
         }
     }
