@@ -12,6 +12,56 @@ public class Airline {
         this.flights = flights;
     }
 
+    public void showFlights() {
+        System.out.println("Nombre de la aerolínea: " + name);
+        for (Flight flight : flights) {
+            System.out.println(flight);
+        }
+    }
+
+    public void showFlightsFromOrigin(String origin) {
+        for (Flight flight : flights) {
+            if (flight.equals(origin)) {
+                System.out.println(flight);
+            }
+        }
+    }
+
+    // findFlight(int flightNumber): busca el vuelo y lo devuelve, si no existe devuelve null
+    public Flight findFlight(int flightNumber) {
+        for (Flight flight : flights) {
+            if (flight.getFlightNumber() == flightNumber) {
+                return flight;
+            }
+        }
+        return null;
+    }
+
+    // showPassengerFlights(String nif): muestra todos los vuelos donde haya un pasajero con el nif del parámetro
+    public void showPassengerFlights(String nif) {
+        for (Flight flight : flights) {
+            if (flight.findPassenger(nif).equals(nif)) {
+                System.out.println(flight);
+            }
+        }
+    }
+
+    // getPassengerSeat(int flightNumber, String nif): Devuelve el asiento del pasajero en el vuelo, si no existe el vuelo o el pasajero, devuelve null
+    public Flight getPassengerSeat(int flightNumber, String nif) {
+        for (Flight flight : flights) {
+            if (flight.getFlightNumber() == flightNumber) {
+                if (flight.findPassenger(nif).equals(nif)) {
+                    return flight;
+                }
+            }
+        }
+        return null;
+    }
+
+    // updateSeatNumber(int flightNumber, String nif, int seatNumber): busca el pasajero en el vuelo, si existe le cambia el asiento. Si no existe el vuelo
+    // o el pasajero muestra mensajes de error.
+    public
+
     public String getName() {
         return name;
     }
