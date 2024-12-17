@@ -60,7 +60,15 @@ public class Airline {
 
     // updateSeatNumber(int flightNumber, String nif, int seatNumber): busca el pasajero en el vuelo, si existe le cambia el asiento. Si no existe el vuelo
     // o el pasajero muestra mensajes de error.
-    public
+    public void updateSeatNumber(int flightNumber, String nif, int seatNumber) {
+        Flight flight = findFlight(flightNumber);
+
+        if (flight != null) {
+
+        } else {
+            System.out.println("No existe el pasajero indicado");
+        }
+    }
 
     public String getName() {
         return name;
