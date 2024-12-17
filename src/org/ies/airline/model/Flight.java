@@ -24,11 +24,24 @@ public class Flight {
             System.out.println(passenger);
         }
     }
-
+// hasPassenger(String nif): devuelve true si el pasajero está en el vuelo y false si no lo está
     public boolean hasPassenger(String nif) {
         for (Passenger passenger : passengers) {
-            if (passenger )
+            if (passenger.getNif().equals(nif)) {
+                return true;
+            }
         }
+        return false;
+    }
+
+// findPassenger(String nif): busca el pasajero en el vuelo y lo devuelve, si no existe devuelve null
+    public Passenger findPassenger(String nif) {
+        for (Passenger passenger : passengers) {
+            if (passenger.getNif().equals(nif)) {
+                return passenger;
+            }
+        }
+        return null;
     }
 
     public int getFlightNumber() {
