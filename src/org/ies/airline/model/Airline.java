@@ -64,9 +64,10 @@ public class Airline {
         Flight flight = findFlight(flightNumber);
 
         if (flight != null) {
+            Passenger passenger = flight.findPassenger(nif);
+            if (passenger != null) {
 
-        } else {
-            System.out.println("No existe el pasajero indicado");
+            }
         }
     }
 
