@@ -2,6 +2,7 @@ package org.ies.airline.model;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Flight {
     private int flightNumber;
@@ -24,6 +25,9 @@ public class Flight {
             System.out.println(passenger);
         }
     }
+
+
+
 // hasPassenger(String nif): devuelve true si el pasajero está en el vuelo y false si no lo está
     public boolean hasPassenger(String nif) {
         for (Passenger passenger : passengers) {
