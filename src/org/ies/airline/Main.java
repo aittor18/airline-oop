@@ -15,8 +15,9 @@ public class Main {
         var passengerReader = new PassengerReader(scanner);
         var flightReader = new FlightReader(scanner, passengerReader);
         var airlineReader = new AirlineReader(scanner, flightReader);
-        var airlineApp1 = new AirlineApp1(scanner, airlineReader, passengerReader)
+        var airlineApp1 = new AirlineApp1(scanner, airlineReader);
 
+        airlineApp1.run();
         //Airline airline = airlineReader.read();
 
         //System.out.println(airline);

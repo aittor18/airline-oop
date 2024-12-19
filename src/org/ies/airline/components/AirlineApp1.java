@@ -51,9 +51,12 @@ public class AirlineApp1 {
                 scanner.nextLine();
 
                 //Cambia el asiento del pasajero
-
+                airline.updateSeatNumber(flightNumber, nif, seatNumber);
             }
-
+            //Si no existe muestra un mensaje de error
+            else {
+                System.out.println("ERROR!, El NIF introducido no corresponde con el NIF de ningún pasajero...");
+            }
         }
 
     }
